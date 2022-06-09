@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/sport")
@@ -55,7 +56,7 @@ public class SportController {
                         )
                     )
                 )
-            ).stream().toList(),
+            ).stream().collect(Collectors.toList()),
             HttpStatus.OK
         );
     }
