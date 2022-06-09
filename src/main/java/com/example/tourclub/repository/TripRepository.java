@@ -10,5 +10,5 @@ import java.util.List;
 public interface TripRepository extends PagingAndSortingRepository<Trip, Integer> {
 
     List<Trip> findAll();
-
+    List<Trip> findAllByIdIn(List<Integer> ids);
 }
